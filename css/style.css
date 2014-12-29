@@ -32,6 +32,17 @@ img {
     float:left;
 }
 
+.msg-error {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	font-size: 2em;
+	height: 50px;
+}
+
 /*-------------------------
 	Input Busca
 --------------------------*/
@@ -71,3 +82,14 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
 .grid {
 	 max-width: 100%;
 }
+
+
+
+
+
+
+
+
+
+
+
