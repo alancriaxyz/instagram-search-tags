@@ -15,7 +15,7 @@
       <input type="text" ng-model="search" ng-enter="executeSearch()" placeholder="Procure por uma #hashtag">
     </div>
     
-    <p ng-show="error">Nenhum resultado encontrado para a hashtag.</p>
+    <p class="msg-error" ng-show="error">Nenhum resultado encontrado para a hashtag :/</p>
     
     <ul class="grid" masonry='{ itemSelector: ".item", columnWidth: 220, gutterWidth: 20, isFitWidth: true, isAnimated: true }'>
       <li class="masonry-brick" ng-repeat="p in pics" >
