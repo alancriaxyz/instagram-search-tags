@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Instagram Find Tags</title>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+
+  <body ng-app="starter" ng-controller="MainCtrl">
+      
+    <div class="bar">
+      <input type="text" ng-model="search" ng-enter="executeSearch()" placeholder="Procure por uma #hashtag">
+    </div>
+    
+    <p ng-show="error">Nenhum resultado encontrado para a hashtag.</p>
+    
+    <ul class="grid" masonry='{ itemSelector: ".item", columnWidth: 220, gutterWidth: 20, isFitWidth: true, isAnimated: true }'>
+      <li class="masonry-brick" ng-repeat="p in pics" >
+        <a href="{{ p.link }}" target="_blank">
+          <img class="item" ng-src="{{ p.images.low_resolution.url }}" >
+        </a>
+      </li>
+    </ul>
+    
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular-resource.min.js"></script>
+    <script type="text/javascript" src="js/masonry.js"></script>
+    <script type="text/javascript" src="js/angular-masonry.js"></script>
+    <script type="text/javascript" src="js/imagesloaded.js"></script>
+    <script type="text/javascript" src="app/app.js"></script>
+    <script type="text/javascript" src="app/services.js"></script>
+    <script type="text/javascript" src="app/directives.js"></script>
+    <script type="text/javascript" src="app/controllers.js"></script>
+    <!-- <script src="js/script.js"></script> -->
+
+  </body>
+
+</html>
