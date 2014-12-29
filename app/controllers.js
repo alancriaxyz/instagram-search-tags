@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('app.controllers', []).controller('MainCtrl', ['$scope', 'instagram', function ($scope, instagram) {
+angular.module('app.controllers', []).controller('MainCtrl', ['$scope', '$timeout', 'instagram', function ($scope, $timeout, instagram) {
 
   var instagramSuccess = function(scope, res) {
     if (res.meta.code !== 200) {
@@ -15,14 +15,15 @@ angular.module('app.controllers', []).controller('MainCtrl', ['$scope', 'instagr
   };
 
   $scope.executeSearch = function () {
-
     $scope.error = false;
     $scope.pics  = [];
   
-    instagram.get(30, $scope.search).success(function(response) {
-      instagramSuccess($scope, response);
-    });
-
+    if ($scope.search) {
+      instagram.get(30, $scope.search).success(function(response) {
+        instagramSuccess($scope, response);
+      });
+    }  
   };
+
 
 }]);
