@@ -10,8 +10,7 @@
     <![endif]-->
   </head>
 
-  <body ng-app="starter" ng-controller="MainCtrl">
-      
+  <body ng-app="starter" ng-controller="MainCtrl" ng-init="executeSearch()">
     <div class="bar">
       <input type="text" ng-model="search" ng-enter="executeSearch()" placeholder="Procure por uma #hashtag">
     </div>
@@ -36,7 +35,7 @@
     <script type="text/javascript" src="app/services.js"></script>
     <script type="text/javascript" src="app/directives.js"></script>
     <script type="text/javascript" src="app/controllers.js"></script>
-    <!-- <script src="js/script.js"></script> -->
+    <!--  <script src="js/script.js"></script> -->
 
   </body>
 
