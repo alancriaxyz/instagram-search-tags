@@ -27,5 +27,39 @@ angular.module('app.controllers', []).controller('MainCtrl', ['$scope', '$timeou
     }  
   };
 
+  $scope.showModal = function(id) {
+      instagram.getPictureMedia(id).success(function(response) {
+          if (response.data !== undefined) {
+              $scope.picture = response.data;
+          } else {
+              // empty data
+          }
+      });
+  };
+
+  $scope.closeModal = function() {
+      if ($scope.picture) {
+          $scope.picture = null;
+          return;
+      }
+  }
 
 }]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

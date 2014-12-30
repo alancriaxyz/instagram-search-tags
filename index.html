@@ -19,11 +19,37 @@
     
     <ul class="grid" masonry='{ itemSelector: ".item", columnWidth: 220, gutterWidth: 20, isFitWidth: true, isAnimated: true }'>
       <li class="masonry-brick" ng-repeat="p in pics" >
-        <a href="{{ p.link }}" target="_blank">
+        <a href="#" ng-click="showModal(p.id)">
           <img class="item" ng-src="{{ p.images.low_resolution.url }}" >
         </a>
       </li>
     </ul>
+
+    <!-- Modal Content -->
+    <div class="modal" ng-show="picture">
+        <a href="#" class="modal-close" ng-click="closeModal()">x</a>
+        <div class="row">
+            <div class="modal-content">
+                <div class="content-left">
+                    <img src="{{ picture.images.standard_resolution.url }}" alt="">
+                </div>
+                <div class="content-right">
+                    <div class="main-info">
+                        <img src="{{ picture.user.profile_picture }}" title="{{ picture.user.username }}" alt="{{ picture.user.username }}" class="profile-img">
+                        <span class="username"><a href="http://instagram.com/{{ picture.user.username }}" target="_blank">{{ picture.user.username }}</a></span>
+                        <span class="caption">{{ picture.caption.text }}</span>
+                    </div>
+                    <ul class="comments">
+                        <li class="comments-item" ng-repeat="comment in picture.comments.data">
+                            <img src="{{ comment.from.profile_picture }}" title="{{ comment.from.username }}" alt="{{ comment.from.username }}" class="comment-user-img">
+                            <span class="comment-username"><a href="http://instagram.com/{{ comment.from.username }}" target="_blank">{{ comment.from.username }}</a></span>
+                            <p class="comment-text">{{ comment.text }}</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
     
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
@@ -40,3 +66,18 @@
   </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
