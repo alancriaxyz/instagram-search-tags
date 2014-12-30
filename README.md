@@ -1,4 +1,4 @@
-Instagram search Tags
+Instags
 =====================
 
 Description
