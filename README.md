@@ -22,7 +22,7 @@ Contribute
 We love pull requests. If you have something you want to add or remove, please open a new pull request.
 
 1. Fork the repository
-2.Create a branch for your new feature (git checkout -b my-new-feature)
+2. Create a branch for your new feature (git checkout -b my-new-feature)
 3. Commit the changes (git commit -am 'Add some feature')
 4. Push to the new branch (git push origin my-new-feature)
-Crie um novo Pull Request
+5. Crie um novo Pull Request
