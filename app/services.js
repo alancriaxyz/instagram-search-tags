@@ -8,7 +8,7 @@ angular.module('app.services', []).factory('instagram', ['$http',
     var clientId = '642176ece1e7445e99244cec26f4de1f';
 
     return {
-      'get': function(count, hashtag) {
+      get: function(count, hashtag) {
         var request = '/tags/' + hashtag + '/media/recent';
         var url = base + request;
         var config = {
@@ -18,8 +18,23 @@ angular.module('app.services', []).factory('instagram', ['$http',
             'callback': 'JSON_CALLBACK'
           }
         };
+
         return $http.jsonp(url, config);
-      }
+      },
+
+      getPictureMedia: function(id) {
+          var request = '/media/' + id;
+          var url = base + request;
+          var config = {
+              'params': {
+                  'client_id': clientId,
+                  'callback': 'JSON_CALLBACK'
+              }
+          };
+
+          return $http.jsonp(url, config);
+      },
+
     };
 
   }

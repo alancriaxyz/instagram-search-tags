@@ -18,6 +18,13 @@ body {
 	background: #34495e;
 }
 
+.row {
+	width: 950px;
+	margin: 0 auto;
+}
+
+.clear { clear: both; }
+
 ul {
 	list-style: none;
 }
@@ -30,6 +37,11 @@ img {
     border:none;
 	left: 0;   
     float:left;
+}
+
+a {
+	color: #333;
+	text-decoration: none;
 }
 
 .msg-error {
@@ -82,6 +94,154 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
 .grid {
 	 max-width: 100%;
 }
+
+/*-------------------------
+	Modal
+--------------------------*/
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.7);
+}
+
+.modal .modal-close {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	color: #FFF;
+	font-size: 2em;
+}
+
+.modal .modal-content {
+	float: left;
+	margin: 50px 0;
+	width: 100%;
+	max-height: 600px;
+	background: #FFF;
+	border: 1px solid #333;
+
+	-webkit-border-radius: 4px 5px;
+	-moz-border-radius: 4px 5px;
+	-ms-border-radius: 4px 5px;
+	-o-border-radius: 4px 5px;
+	border-radius: 4px 5px;
+}
+
+.modal-content .content-left {
+	width: 600px;
+	float: left;
+}
+
+.modal-content .content-left img {
+	width: 100%;
+	height: auto;
+}
+
+.modal-content .content-right {
+	float: right;
+	padding: 10px;
+	width: 330px;
+}
+
+.content-right .main-info {
+	margin-bottom: 15px;
+}
+
+.main-info .profile-img {
+	float: left;
+	margin: 3px 0 0 0;
+	width: 40px;
+	height: 40px;
+	border: 1px solid #333;
+
+	-webkit-border-radius: 4px 5px;
+	-moz-border-radius: 4px 5px;
+	-ms-border-radius: 4px 5px;
+	-o-border-radius: 4px 5px;
+	border-radius: 4px 5px;
+}
+
+.main-info a {
+	color: #1C5380;
+}
+
+.main-info .username {
+	float: left;
+	margin: 10px;
+	font-size: 20px;
+}
+
+.main-info .caption {
+	float: left;
+	margin: 10px 0;
+	max-height: 75px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	color: #333;
+	font-size: 14px;
+	text-align: left;
+}
+
+.modal-content .comments {
+	float: left;
+	padding: 10px 0;
+	margin: 5px 0 0 0;
+	width: 100%;
+	height: 400px;
+	overflow-y: scroll;
+	overflow-x: hidden; 
+	border-top: 1px solid #CCC;
+}
+
+.comments .comments-item {
+	float: left;
+	position: relative;
+	margin: 7px 0;
+	width: 100%;
+	border-bottom: 1px solid #f4f4f4;
+}
+.comments .comments-item:last-child { border: none; }
+
+.comments-item .comment-user-img {
+	position: absolute;
+	top: 5px;
+	left: 0;
+	width: 30px;
+	height: 30px;
+}
+
+.comments-item a  {
+	color: #265B85;
+}
+
+.comments-item .comment-username {
+	float: left;
+	margin: 0 39px;
+}
+
+.comments-item .comment-text {
+	float: left;
+	width: 290px;
+	margin: 2px 0 10px 40px;
+	color: #333;
+	font-size: 13px;
+	text-align: left;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
