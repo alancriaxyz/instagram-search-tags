@@ -19,7 +19,7 @@ To simulate this project, just clone this repository and access the ```index.htm
 Contribute
 ==========
 
-We love pull requests <3. If you have something you want to add or remove, please open a new pull request.
+We love pull requests :heart:. If you have something you want to add or remove, please open a new pull request.
 
 1. Fork the repository
 2. Create a branch for your new feature (git checkout -b my-new-feature)
