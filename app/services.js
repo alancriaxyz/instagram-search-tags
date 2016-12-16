@@ -5,7 +5,7 @@ angular.module('app.services', []).factory('instagram', ['$http',
     
     // get your own client id http://instagram.com/developer/
     var base = "https://api.instagram.com/v1";
-    var clientId = '642176ece1e7445e99244cec26f4de1f';
+    var clientId = '';
 
     return {
       get: function(count, hashtag) {
